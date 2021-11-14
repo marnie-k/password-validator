@@ -1,58 +1,36 @@
-function validatePassword (password) {
-  
-const password = ""
+const validatePassword = "";
 
-const eightPlus = true if
-
-const lowerPresent = true if
-
-const upperPresent = true if
-
-const spCharPreseent = '!@#$%^&*()-_=+'
-
+function determineLength (input) { 
+  if (input.length >= 8); true; false
 }
 
-//   const password
-// input will be a variable named password
-// password could be a number or a string
+function determineLower(input) {
+for ( var i = 0; i !== input.lowerCase; i++ ); true; false
+}
 
+function determineUpper(input) {
+for ( var i = 0; i != input.upperCase; i++); true; false
+}
 
-// const eightPlus
-// create a variable named eightPlus
-// create function that determines length named determineLength()
-// use array.length
-// if array length  is >= 8 return true
+function determineSpChar(input) {
+  for(var i = 0; i != '!@#$%^&*()'; i++); true; false
+}
 
-// switch statement runs through remainin 4 conditions
-
-//   const lowerPreesent
-// create a variable named lowerPreesent
-// create function that determines length named determineLower()
-// Must contain at least one lower case letter
-// check  with  for  loop
-// lowerPreesent === true
-
-//const upperPresent
-// create a variable named upperPresent
-// create function that determines length named determineUppre()
-// Must contain at least one upper case letter
-// check  with  for  loop
-// upperPresent === true
-
-//const numPresent
-// create variable named numPresent
-// create function that determines length named determineNum()
-// Must contain at least one numeric value
-// check  with  for  loop
-// numberPresent === true
-
-// const spCharPreseent
-// create variable named spCharPreseent
-// create function that determines length named determineSpecial()
-// Must contain at least one special character
-// check  with  for  loop
-// spCharPreseent === true
-
-// if 
+function validatePassword(correctLength, correctLower, correctUpper, correctNumber, correctSpecial) 
+{
+  if (
+    correctLength,true +
+    correctLower,true +
+    correctUpper,true +
+    correctNumber,true +
+    correctSpecial,true, 
+  true, false
+  )
+let correctLength = undefined
+let correctLower = undefined
+let correctUpper = undefined
+let correctNumber = undefined
+let correctSpecial = undefined
+}
 
 module.exports = validatePassword
