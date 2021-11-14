@@ -1,36 +1,53 @@
-const validatePassword = "";
-
-function determineLength (input) { 
-  if (input.length >= 8); true; false
+//const validatePassword = "";
+// const pwd = undefined
+const determineLength = (data) => { 
+  if (data.test1.length >= 8) return true 
 }
 
-function determineLower(input) {
-for ( var i = 0; i !== input.lowerCase; i++ ); true; false
+const determineLower = (data) => {
+for ( var i = 0; i !== data.lowerCase; i++ ) return true 
 }
 
-function determineUpper(input) {
-for ( var i = 0; i != input.upperCase; i++); true; false
+const determineUpper = (data) => {
+for ( var i = 0; i != data.upperCase; i++) return true 
 }
 
-function determineSpChar(input) {
-  for(var i = 0; i != '!@#$%^&*()'; i++); true; false
+const determineSpChar = (data) => {
+  for(var i = 0; i != (data='!@#$%^&*()'); i++) return true
 }
 
-function validatePassword(correctLength, correctLower, correctUpper, correctNumber, correctSpecial) 
-{
-  if (
-    correctLength,true +
-    correctLower,true +
-    correctUpper,true +
-    correctNumber,true +
-    correctSpecial,true, 
-  true, false
-  )
-let correctLength = undefined
-let correctLower = undefined
-let correctUpper = undefined
-let correctNumber = undefined
-let correctSpecial = undefined
+const validatePassword = (valid) => (if (
+  valid.correctLength = true +
+  valid.correctLower = true +
+  valid.correctUpper = true +
+  valid.correctNumber = true, 
+  valid.correctSpecial = true)  return true
+)
+
+
+const correctLength = undefined;
+let correctLower = undefined;
+let correctUpper = undefined;
+let correctNumber = undefined;
+let correctSpecial = undefined;
+
+let valid = {
+  correctLength: true,
+  correctLower: true,
+  correctUpper: true,
+  correctNumber: true,
+  correctSpecial: true,
 }
+//let pwd = undefined;
+/*
+let data = {
+  test1: 'P455w0rd!',
+  test2: 'P4w0rd!',
+  test3: 'P455W0RD!',
+  test4: 'p455w0rd!',
+  test5: 'Password!'
+}
+*/
+
 
 module.exports = validatePassword
