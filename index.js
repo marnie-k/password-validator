@@ -1,5 +1,5 @@
 
-let determineLength = () => {
+const determineLength = () => {
   if (determineLength.length < 8) {
     return false
   }
