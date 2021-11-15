@@ -1,53 +1,55 @@
-//const validatePassword = "";
-// const pwd = undefined
-const determineLength = (data) => { 
-  if (data.test1.length >= 8) return true 
+
+let determineLength = () => {
+  if (determineLength.length < 8) {
+    return false
+  }
+  else true
 }
 
-const determineLower = (data) => {
-for ( var i = 0; i !== data.lowerCase; i++ ) return true 
+function determineNumber(password) {
+  for (var i = 0; i < password.length; i++) {
+    if (isNaN(parseInt(password[i])) === false) return true
+  }
+
+  return false
 }
 
-const determineUpper = (data) => {
-for ( var i = 0; i != data.upperCase; i++) return true 
+const determineLower = (password) => {
+  for (var i = 0; i < password.length; i++) {
+    if (password[i] === (password.toLowerCase(password[i]))
+    ) return true
+  }
+
+  return false
 }
 
-const determineSpChar = (data) => {
-  for(var i = 0; i != (data='!@#$%^&*()'); i++) return true
+const determineUpper = (password) => {
+  for (var i = 0; i < password.length; i++) {
+    if (password[i] === (password.toUpperCase(data[i]))
+    ) return true
+  }
+
+  return false
 }
 
-const validatePassword = (valid) => (if (
-  valid.correctLength = true +
-  valid.correctLower = true +
-  valid.correctUpper = true +
-  valid.correctNumber = true, 
-  valid.correctSpecial = true)  return true
-)
+function determineSpChar(password) {
+  for (var i = 0; i < password.length; i++) {
+    if (password[i] === '!@#$%^&*()') return true
+  }
 
-
-const correctLength = undefined;
-let correctLower = undefined;
-let correctUpper = undefined;
-let correctNumber = undefined;
-let correctSpecial = undefined;
-
-let valid = {
-  correctLength: true,
-  correctLower: true,
-  correctUpper: true,
-  correctNumber: true,
-  correctSpecial: true,
+  return false
 }
-//let pwd = undefined;
-/*
-let data = {
-  test1: 'P455w0rd!',
-  test2: 'P4w0rd!',
-  test3: 'P455W0RD!',
-  test4: 'p455w0rd!',
-  test5: 'Password!'
-}
-*/
 
+let validatePassword = (password) => {
+  if ((determineLength(password)) &&
+  (determineLower(password)) &&
+  (determineNumber(password)) &&
+  (determineUpper(password)) &&
+  (determineSpChar(password))) {
+    return true
+  }
+  else return false
+}
 
 module.exports = validatePassword
+
