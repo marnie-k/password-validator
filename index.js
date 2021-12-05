@@ -1,55 +1,39 @@
-
-let determineLength = () => {
-  if (determineLength.length < 8) {
-    return false
-  }
-  else true
+function isLowerCase(pwd, index) {
+  return pwd.charCodeAt(index) >= 97 && pwd.charCodeAt(index) <= 122
 }
 
-function determineNumber(password) {
-  for (var i = 0; i < password.length; i++) {
-    if (isNaN(parseInt(password[i])) === false) return true
-  }
-
-  return false
+function isUpperCase(pwd, index) {
+  return pwd.charCodeAt(index) >= 65 && pwd.charCodeAt(index) <= 90
 }
 
-const determineLower = (password) => {
-  for (var i = 0; i < password.length; i++) {
-    if (password[i] === (password.toLowerCase(password[i]))
-    ) return true
-  }
-
-  return false
+function isNumeric(pwd, index) {
+  return !isNaN(pwd[index])
 }
 
-const determineUpper = (password) => {
-  for (var i = 0; i < password.length; i++) {
-    if (password[i] === (password.toUpperCase(data[i]))
-    ) return true
+
+function validatePassword(pwd) {
+  if (pwd.length < 8) return false
+
+  let lower = 0
+  let upper = 0
+  let numeric = 0
+  let special = 0
+
+  // loop throught letters
+  for (i = 0; i < pwd.length; i++) {
+    // if lower, that requirement is met 
+    if (isLowerCase(pwd, i)) {
+      lower++
+    } else if (isUpperCase(pwd, i)) {
+      upper++
+    } else if (isNumeric(pwd, i)) {
+      numeric++
+    } else {
+      special++
+    }
   }
 
-  return false
-}
-
-function determineSpChar(password) {
-  for (var i = 0; i < password.length; i++) {
-    if (password[i] === '!@#$%^&*()') return true
-  }
-
-  return false
-}
-
-let validatePassword = (password) => {
-  if ((determineLength(password)) &&
-  (determineLower(password)) &&
-  (determineNumber(password)) &&
-  (determineUpper(password)) &&
-  (determineSpChar(password))) {
-    return true
-  }
-  else return false
+  return lower > 0 && upper > 0 && numeric > 0 && special > 0
 }
 
 module.exports = validatePassword
-
